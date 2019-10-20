@@ -43,5 +43,11 @@ module.exports =  {
       inject: true,
       template: '!!ejs-loader!./src/template/index.ejs'
     })
-  ]
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    port: 9000,
+    compress: true,
+    // open: true
+  }
 };
