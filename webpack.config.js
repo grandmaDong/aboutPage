@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports =  {
-  entry: ['./src/index.js', './src/main.css'],
+  entry: ['./src/index.tsx', './src/main.css'],
   //脚本命令中配置 webpack --mode=development 
   mode: 'development', 
   module: {
@@ -22,7 +22,7 @@ module.exports =  {
             options: {
               // you can specify a publicPath here
               // by default it uses publicPath in webpackOptions.output
-              // publicPath: '../',
+              // publicPath: './',
               hmr: process.env.NODE_ENV === 'development',
             },
           },
@@ -30,20 +30,6 @@ module.exports =  {
           'less-loader' // 不使用less-loader 也能处理文件中包含的less？？？
         ],
       },
-      // {
-      //   test: /\.(less|css)$/,
-      //   use: [
-      //     {
-      //       loader: 'style-loader', // creates style nodes from JS strings
-      //     },
-      //     {
-      //       loader: 'css-loader', // translates CSS into CommonJS
-      //     },
-      //     {
-      //       loader: 'less-loader', // compiles Less to CSS
-      //     },
-      //   ],
-      // },
     ],
   },
   resolve: {
