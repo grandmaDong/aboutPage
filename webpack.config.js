@@ -1,9 +1,10 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports =  {
-  entry: './src/index.js',
+  entry: ['./src/index.js', './src/main.css'],
   //脚本命令中配置 webpack --mode=development 
   mode: 'development', 
   module: {
@@ -14,19 +15,35 @@ module.exports =  {
         exclude: /node_modules/
       },
       {
-        test: /\.less$/,
+        test: /\.(css|less)$/,
         use: [
           {
-            loader: 'style-loader', // creates style nodes from JS strings
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              // you can specify a publicPath here
+              // by default it uses publicPath in webpackOptions.output
+              // publicPath: '../',
+              hmr: process.env.NODE_ENV === 'development',
+            },
           },
-          {
-            loader: 'css-loader', // translates CSS into CommonJS
-          },
-          {
-            loader: 'less-loader', // compiles Less to CSS
-          },
+          'css-loader',
+          'less-loader' // 不使用less-loader 也能处理文件中包含的less？？？
         ],
       },
+      // {
+      //   test: /\.(less|css)$/,
+      //   use: [
+      //     {
+      //       loader: 'style-loader', // creates style nodes from JS strings
+      //     },
+      //     {
+      //       loader: 'css-loader', // translates CSS into CommonJS
+      //     },
+      //     {
+      //       loader: 'less-loader', // compiles Less to CSS
+      //     },
+      //   ],
+      // },
     ],
   },
   resolve: {
@@ -42,11 +59,18 @@ module.exports =  {
       title: 'test demo',
       inject: true,
       template: '!!ejs-loader!./src/template/index.ejs'
-    })
+    }),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // all options are optional
+      filename: './assets/index.css',
+      chunkFilename: '[id].css',
+      ignoreOrder: false, // Enable to remove warnings about conflicting order
+    }),
   ],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
-    port: 9000,
+    port: 9001,
     compress: true,
     // open: true
   }

@@ -1,5 +1,4 @@
 import React from "react";
-import './app.less'
 
 import { Test } from './apps/app'
 
