@@ -9,7 +9,7 @@ export class Test extends Component<Props, State>{
     constructor(props: Props){
         super(props)
         this.state = {
-            message: 'refresh page through hmr'
+            message: 'refresh page througt hmr and refresh'
         }
     }
 
