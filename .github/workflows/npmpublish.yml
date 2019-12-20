@@ -2,7 +2,6 @@ name: Node.js Package
 
 on:
   push:
-    types: [created]
 
 jobs:
   build:
@@ -12,4 +11,4 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm test
+      - run: yarn test
