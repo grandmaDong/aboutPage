@@ -11,7 +11,7 @@ module.exports =  {
       {
         test: /\.(js|tsx?)$/,
         use: 'ts-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.less$/,
@@ -27,6 +27,23 @@ module.exports =  {
           },
         ],
       },
+      {
+        test:/\.css$/,
+        exclude:/src/,
+        use:[
+            { loader: "style-loader",},
+            {
+                loader: "css-loader",
+                options:{
+                    importLoaders:1
+                }
+            }
+        ],
+      },
+      {
+        test: /\.(png|jpg|jpeg)$/,
+        use: 'url-loader',
+      }
     ],
   },
   resolve: {
@@ -42,7 +59,8 @@ module.exports =  {
       title: 'test demo',
       inject: true,
       template: '!!ejs-loader!./src/template/index.ejs'
-    })
+    }),
+    // ["import", { "libraryName": "antd", "style": true }]
   ],
   devServer: {
     contentBase: path.join(__dirname, "dist"),

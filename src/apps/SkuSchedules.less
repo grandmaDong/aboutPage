@@ -1,0 +1,110 @@
+html,body{
+  height: 100%;
+}
+/* 
+  样式设置
+ */
+ #root {
+   height: 100%;
+ }
+.set-schedule-box {
+  display: flex;
+  flex-direction: row;
+
+  .calendar-setBox {
+    height: 100%;
+    flex: 1;
+    min-width: 480px;
+    border: 1px solid #eaeef5;
+  }
+  .lessonSelectBox {
+    width: 300px;
+    border: 1px solid #eaeef5;
+    padding: 10px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      li{
+        box-sizing: border-box;
+        width: 60px;
+        text-align: center;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        border: 2px solid transparent;
+        background: #E4F6FB;
+        padding: 12px;
+        color: #003359;
+        display: inline-block;
+        margin: 0 10px 10px 0;
+        height: 50px;
+        line-height: 20px;
+        transform: scaleY(1);
+        word-wrap: break-word;
+        cursor: pointer;
+        &:hover {
+          -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+          -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+          box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+          border: 2px solid #40A1BF;
+          background: #E4F6FB;
+        }
+        &.is-selected {
+          -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+          -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+          box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+          border: 2px solid #40A1BF;
+          background: #E4F6FB;
+        }
+      }
+    }
+  }
+}
+
+/* 
+  elementUi 样式
+ */
+ .main-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.el-header, .el-footer {
+  background-color: #B3C0D1;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+}
+
+.el-aside {
+  background-color: #D3DCE6;
+  color: #333;
+  text-align: center;
+}
+.el-aside .el-submenu {
+  text-align: left;
+}
+
+.el-main {
+  background-color: #E9EEF3;
+  color: #333;
+  text-align: center;
+}
+
+body > .el-container {
+  margin-bottom: 40px;
+}
+
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
+  line-height: 260px;
+}
+
+.el-container:nth-child(7) .el-aside {
+  line-height: 320px;
+}
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 200px;
+  min-height: 100%;
+  text-align: left;
+}
