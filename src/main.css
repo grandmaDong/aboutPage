@@ -1,0 +1,5 @@
+@import './apps/app.less';
+body {
+    background: #ccc;
+    color: #eee;
+}
