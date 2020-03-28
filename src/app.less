@@ -1,9 +1,4 @@
 /* 
-  自己定义的css
- */
- @import './apps/SkuSchedules.less';
- @import './apps/Header/header.less';
- /* 
    初始化css
  */
  
@@ -14,8 +9,8 @@
  code, kbd, pre, samp { font-family:couriernew, courier, monospace; } 
  small{ font-size:12px; } 
  ul, ol { list-style:none; } 
- a { text-decoration:none; } 
- a:hover { text-decoration:underline; } 
+ a { text-decoration:none; outline: none; } 
+ a:hover { text-decoration: none; } 
  sup { vertical-align:text-top; } 
  sub{ vertical-align:text-bottom; } 
  legend { color:#000; } 
@@ -23,3 +18,13 @@
  button, input, select, textarea { font-size:100%; } 
  table { border-collapse:collapse; border-spacing:0; }
  div { box-sizing: border-box }
+ p { color: #555;}
+
+
+ /* 
+  自己定义的css
+ */
+ @import './apps/SkuSchedules.less';
+ @import './apps/Header/header.less';
+ @import './components/nav/nav.less';
+ @import './apps/Home/home.less';

@@ -5,6 +5,7 @@ import './app.less'
 import { Home } from "./apps/Home/Home";
 import { About } from "./apps/About/About";
 import { Header } from './apps/Header/Header'
+import { Message } from './apps/Message/message'
 
 const App = () => {
   
@@ -13,17 +14,21 @@ const App = () => {
       <Router>
         <div>
           <Header>
-            <ul className="nav">
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/home">Home</Link></li>
+            <ul className="top-nav">
+              <li><Link to="/message">留言</Link></li>
+              <li><Link to="/about">关于</Link></li>
+              <li><Link to="/home">首页</Link></li>
             </ul>
           </Header>
         </div>
-        <Switch>
-          <Route path='/' component={Home} exact></Route>
-          <Route path='/about' component={About}></Route>
-          <Route path='/home' component={Home}></Route>
-        </Switch>
+        <div className="page-content">
+          <Switch>
+            <Route path='/' component={Home} exact></Route>
+            <Route path='/about' component={About}></Route>
+            <Route path='/home' component={Home}></Route>
+            <Route path='/message' component={Message}></Route>
+          </Switch>
+        </div>
       </Router>
     </div>
   );
