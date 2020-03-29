@@ -2,10 +2,51 @@ header {
   .header-inner{
     background-color: #fff;
     height: 60px;
-    padding: 10px 20px;
+    padding: 10px 100px;
     box-shadow: 0 2px 8px #f0f1f2;
     margin-bottom: 5px;
-    // background: url('./images/header.jpg') no-repeat center;
-    // background-size: cover;
+    display: flex;
+    flex-direction: row;
+    .logo {
+      width: 100px;
+      background: url('./images/logo.jpeg') no-repeat center;
+      background-size: 100px 40px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .m-nav {
+      flex: 1;
+    }
+    .search-box {
+      width: 200px;
+      margin-left: 20px;
+      position: relative;
+      .search-input {
+        height: 32px;
+        width: 145px;
+        background: #f2f2f2;
+        line-height: 32px;
+        border: none;
+        border-radius: 20px;
+        margin-top: 4px;
+        padding: 0 30px 0 20px;
+      }
+      .search-btn {
+        position: absolute;
+        right: 0;
+        top: 4px;
+        width: 30px;
+        height: 32px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background: #f2f2f2 url('./images/search.png') no-repeat center;
+        background-size: 16px 16px; 
+        cursor: pointer;
+        &:hover {
+          background: #f2f2f2 url('./images/search-color.png') no-repeat center;
+          background-size: 16px 16px; 
+        }
+      }
+    }
   }
 }
