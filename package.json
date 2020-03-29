@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --contentBase --config build/webpack.dev.config.js",
-    "build": "webpack --config build/webpack.prod.config.js",
+    "dev": "webpack-dev-server --open --contentBase --config webpackConfig/webpack.dev.config.js",
+    "build": "webpack --config webpackConfig/webpack.prod.config.js",
     "test": "webpack"
   },
   "keywords": [],
