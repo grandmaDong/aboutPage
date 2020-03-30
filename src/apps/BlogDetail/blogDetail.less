@@ -1,0 +1,44 @@
+.blog-page{
+  flex: 1;
+  padding: 20px 100px;
+  .blog-detail{
+    margin-top: 60px;
+    background: rgba(255, 255, 255, .68);
+    padding: 20px;
+    animation: move .6s ease 0s alternate;
+    box-shadow: 0 0 5px rgba(202, 203, 203, 0.5);
+    .blog-title {
+      margin-top: 20px;
+      color: #515250;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .about-blog {
+      color: #787977;
+      font-size: 12px;
+      line-height: 1.5;
+      .author{
+        a {
+          color: #787977;
+          font-size: 12px;
+          margin-left: 5px;
+        }
+      }
+      .update-time{
+        margin-left: 10px;
+      }
+    }
+    .blog-content{
+      padding-top: 20px;
+    }
+  }
+}
+
+@keyframes move{
+  from{
+    transform: translate(200px, 200px) scale(0.3) rotate(45deg);
+  }
+  to{
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}

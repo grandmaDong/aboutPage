@@ -8,6 +8,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = merge(webpackBaseConfig, {
   mode: 'production',
   output: {
+    publicPath: 'http://dwj.zhoutao123.com/',
     filename: '[name].js',
     chunkFilename: '[name].chunk.js'
   },
@@ -21,7 +22,7 @@ module.exports = merge(webpackBaseConfig, {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // all options are optional
-      filename: './assets/index.css',
+      filename: 'assets/index.css',
       chunkFilename: '[id].css',
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),

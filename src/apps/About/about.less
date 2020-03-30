@@ -4,7 +4,7 @@
   padding: 20px 100px;
   flex-direction: row;
   .introduce-myself {
-    width: 200px;
+    width: 260px;
     border: 1px solid #eee;
     border-radius: 4px;
     padding: 20px;
@@ -12,16 +12,75 @@
     color: #333;
     font-size: 16px;
     font-weight: bold;
+    .portal {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      margin: 30px auto;
+    }
+    .name {
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: center;
+    }
+    .motto {
+      font-size: 14px;
+      text-align: center;
+    }
+    .email {
+      font-size: 14px;
+      text-align: center;
+    }
   }
   .skill-list {
-    color: #333;
-    font-size: 16px;
-    font-weight: bold;
     margin-left: 20px;
     flex: 1;
     border: 1px solid #eee;
     padding: 20px;
     background-color: rgba(255, 255, 255, .38);
     border-radius: 4px;
+    .title {
+      color: #333;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    .skill-content {
+      width: 80%;
+      .skill-item {
+        height: 80px;
+        // border: 1px solid #ccc;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 40px;
+        .l-skill-name {
+          font-weight: bold;
+          width: 100px;
+          text-align: center;
+          margin-right: 10px;
+          .b-percent{
+            color: #4ba02c;
+          }
+        }
+        .r-skill-percent {
+          position: relative;
+          height: 10px;
+          flex: 1;
+          background: #fce8b5;
+          border-radius: 5px;
+          .handle-percent{
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #ddcdf1;
+            width: 50%;
+            height: 10px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
   }
 }
