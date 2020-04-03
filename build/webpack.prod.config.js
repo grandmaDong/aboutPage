@@ -15,7 +15,7 @@ module.exports = merge(webpackBaseConfig, {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'prod environment',
+      title: 'Della的个人博客',
       inject: true,
       template: '!!ejs-loader!./src/template/index.ejs'
     }),
