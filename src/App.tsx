@@ -7,7 +7,7 @@ import { About } from "./apps/About/About";
 import { Header } from './apps/Header/Header'
 import { Message } from './apps/Message/message'
 import { BlogDetail } from "./apps/BlogDetail/BlogDetail";
-import { Login } from "./apps/Login/login";
+import { Login } from "./apps/Login/Login";
 
 const App = () => {
   
