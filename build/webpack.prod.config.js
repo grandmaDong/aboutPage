@@ -26,5 +26,10 @@ module.exports = merge(webpackBaseConfig, {
       chunkFilename: '[id].css',
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
-  ]
+  ],
+  performance: {
+    hints: "warning",
+    maxEntrypointSize: 5000000,
+    maxAssetSize: 3000000
+  }
 })
