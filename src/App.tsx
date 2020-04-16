@@ -7,6 +7,7 @@ import { About } from "./apps/About/About";
 import { Header } from './apps/Header/Header'
 import { Message } from './apps/Message/message'
 import { BlogDetail } from "./apps/BlogDetail/BlogDetail";
+import { Login } from "./apps/Login/login";
 
 const App = () => {
   
@@ -29,6 +30,7 @@ const App = () => {
             <Route path='/home' component={Home}></Route>
             <Route path='/message' component={Message}></Route>
             <Route path='/blogDetail' component={BlogDetail}></Route>
+            <Route path='/login' component={Login}></Route>
           </Switch>
         </div>
       </Router>

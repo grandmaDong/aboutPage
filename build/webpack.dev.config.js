@@ -27,7 +27,7 @@ module.exports = merge(webpackBaseConfig, {
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
-    port: 9000,
+    port: 3000,
     historyApiFallback: true, // 解决刷新cannot get 问题
   }
 })
