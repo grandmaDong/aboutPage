@@ -29,5 +29,11 @@ module.exports = merge(webpackBaseConfig, {
     compress: true,
     port: 3000,
     historyApiFallback: true, // 解决刷新cannot get 问题
+    proxy: {
+      '/api': {
+        target: 'http://localhost:9000/',
+        secure: false
+      }
+    }
   }
 })

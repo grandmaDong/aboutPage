@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios'
 
 interface Blog {
   id: number;
@@ -48,6 +49,19 @@ export class Home extends Component<Props, State> {
       ]
     }
   }
+
+  componentWillMount () {
+    // axios.get('https://5b5e71c98e9f160014b88cc9.mockapi.io/api/v1/lists').then(
+    //     (res) => {
+    //         console.log(res)
+    //     }
+    // ).catch(error => console.log(error));
+    axios.get('/api/blog/list').then(res => {
+      console.log(res);
+    }).catch(err => {
+      console.log(err);
+    })
+}
 
   blogList = () => {
     const { blogList } = this.state

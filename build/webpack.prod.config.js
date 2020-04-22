@@ -8,7 +8,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = merge(webpackBaseConfig, {
   mode: 'production',
   output: {
-    publicPath: 'http://dwj.zhoutao123.com/',
+    // publicPath: 'http://dwj.zhoutao123.com/',
+    publicPath: 'http://www.myblog.web/',
     filename: '[name].js',
     chunkFilename: '[name].chunk.js'
   },
