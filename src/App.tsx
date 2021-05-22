@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Route } from 'react-router';
-import { Switch, BrowserRouter as Router, Link } from 'react-router-dom'
+import { Route, Switch, BrowserRouter as Router, Link } from 'react-router-dom'
 import './app.less'
 import { Home } from "./apps/Home/Home";
 import { About } from "./apps/About/About";
@@ -22,7 +21,7 @@ const App = () => {
               <li><Link to="/home">首页</Link></li>
             </ul>
           </Header>
-        </div>
+        </div> 
         <div className="page-content">
           <Switch>
             <Route path='/' component={Home} exact></Route>
